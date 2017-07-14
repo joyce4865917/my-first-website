@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /*border: 1px solid black;*/
+    /* 先有邊線，調大小才有視線依據 */
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 主色(primary) #29323b */
+
+
+/* 強調色(accent) #E2C0B9 */
+
+
+/* 字體顏色 #333 */
+
+html {
+    background: #29323b;
+    position: relative;
+}
+
+html:after {
+    content: "";
+    width: 100%;
+    height: 300px;
+    display: block;
+    background: #E2C0B9;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.cv {
+    width: 700px;
+    margin: auto;
+    background: white;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.cv-header,
+.cv-body,
+.cv-footer {
+    padding: 40px 50px;
+}
+
+.cv-header {
+    background: #eee;
+}
+
+.cv-header>h1,
+.section-title {
+    text-transform: uppercase;
+    /*uppercase都大寫,capitilize第一個字大寫*/
+}
+
+.cv-footer {
+    background: #29323b;
+}
+
+.experience {
+    position: relative;
+    /* 以experience為依據 */
+    padding: 30px 0;
+    /*上下,左右的空白*/
+    border-bottom: 1px dashed #333;
+    /*底部框線的設定*/
+}
+
+.experience:last-child {
+    border-bottom: none;
+    /*利用last-child的設定(剛好排在.experience項目中的最後一項)將其底線去除*/
+}
+
+.experience>img {
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    /* 以experience為依據，讓圖片放在此區塊的右上方 */
+}
+
+.social-link {
+    color: white;
+    width: 40px;
+    height: 40px;
+    /*超連結是inline行內元素*/
+    display: inline-block;
+    /*三個block會放在一起但有長寬的慨念，block設定值會換行*/
+    border: 1px dashed #eee;
+    /*虛線的框線*/
+    background: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    -mob-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.social-link:hover {
+    background: rgba(0, 0, 0, .2);
+    /*滑鼠移至時改變背景顏色*/
+}
+
+.social-link:active {
+    background: rgba(0, 0, 0, .8);
+    /*左鍵點擊時背景顏色改變*/
+}
